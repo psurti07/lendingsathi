@@ -306,27 +306,12 @@
                 <div class="form-holder">
                     <div class="contact-form-notice">
                         <p class="s-14">
-                            <strong>Important Disclosure :</strong> Repayment tenure may extend up to <strong>72
-                                months</strong>, with <strong>annual interest rates typically ranging between 11.5% –
-                                36%</strong>, depending on the applicant’s profile and the policies of the respective
-                            lending partner.
+                            <strong>Important Disclosure :</strong> Planetory Finserv India Private Limited is a service provider that connects users with third-party banks and NBFCs and does not provide loans directly. The repayment tenure for personal loans typically ranges from a minimum of 6 months to a maximum of 60 months (5 years), depending on the lender. The maximum Annual Percentage Rate (APR) can go up to 34.5% per annum, inclusive of applicable charges, depending on the applicant’s profile and lender policies.
                         </p>
-                        <p class="s-14">Processing charges may apply up to <strong>2%</strong> of the approved amount.
-                        </p>
+                        <p class="s-14">For example, if a user takes a loan of ₹5,00,000 at an interest rate of 12% per annum for 60 months, the processing fee may be up to 2% (₹10,000), the EMI would be approximately ₹11,122, the total interest payable would be around ₹1,67,320, and the total repayment amount would be approximately ₹6,67,320. All figures are indicative. Actual loan terms may vary depending on eligibility and lender criteria.</p>
+
                         <p class="s-14">
-                            <strong>Illustration:</strong> For a credit amount of <strong>₹1,00,000</strong> at an
-                            <strong>interest rate of 11.5% per annum</strong> for a tenure of <strong>6 years</strong>,
-                            along with a <strong> 2% processing charge</strong>, the approximate <strong>APR may be
-                                around 12.26%</strong>.
-                        </p>
-                        <p class="s-14">
-                            All figures are indicative. Actual terms including approval, interest rate, tenure,
-                            processing charges, and disbursement are determined solely by the respective lending partner
-                            based on their eligibility criteria, internal policies, and regulatory guidelines.
-                        </p>
-                        <p class="s-14">
-                            <strong>Registered Office Address:</strong> {{ env('COMPANY_ADDRESS') }} <br /> Mobile:
-                            {{ env('COMPANY_MOBILE') }} | Email: {{ env('INFO_EMAIL') }}
+                            <strong>Disclaimer:</strong> Planetory Finserv India Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.
                         </p>
                     </div>
                 </div>

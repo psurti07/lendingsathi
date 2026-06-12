@@ -4,6 +4,11 @@
 
 <body>
 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6WBSTQK"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- PRELOADER SPINNER -->
     <div id="loading" class="loading--theme">
         <div id="loading-center"><span class="loader-img"></span></div>
