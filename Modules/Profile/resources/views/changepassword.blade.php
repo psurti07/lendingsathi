@@ -28,7 +28,7 @@
                                         @component('components.ajax-error',['field'=>'password_confirmation'])@endcomponent
                                     </div>
                                     <div class="col-md-12 text-end">
-                                        <button class="btn btn-success btn-sm hover-elevate-up" type="submit" id="support-submit-btn">Update Password</button>
+                                        <button class="btn btn-success btn-sm" type="submit" id="support-submit-btn">Update Password</button>
                                     </div>
                                 </div>
                             </form>

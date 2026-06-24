@@ -287,7 +287,7 @@ section,
 .bg--green-400 { background-color: #38ba89; }
 .bg--green-300 { background-color: #6fd792; }
 .bg--green-200 { background-color: #cff2db; }
-.bg--green-100 { background-color: #38ba8912; }
+.bg--green-100 { background-color: #e5f4f0; }
 
 .bg--pink-500 { background-color: #ff149c; }
 .bg--pink-400 { background-color: #f74780; }
@@ -988,7 +988,7 @@ p.btns-group-txt span.txt-data a:hover {
 .btn--tra-black,
 .hover--tra-black:hover {
      color: #fff !important;
-    background-color: #38ba89 !important;
+    background-color: #0a100f  !important;
     border-color: #38ba89 !important;
 
 }
@@ -2532,9 +2532,9 @@ p.video-txt-sm {
 /*------------------------------------------*/
 
 .desktoplogo img {
-    width: 165px;
+    width: 175px;
     max-width: inherit;
-    /* max-height: 60px; */
+ 
 }
 
 .blog-header .desktoplogo img {
@@ -3539,6 +3539,9 @@ span.sm-info {
 #hero-7 {
     padding-top:130px;
     padding-bottom: 80px;
+        position: relative;
+    overflow: hidden;
+  
 }
 
 #hero-7 .quick-form {
@@ -4488,7 +4491,7 @@ span.sm-info {
 }
 
 .fbox-7 {
-    border: 1px solid #d9d9d9;
+    border: 2px solid #d9d9d9;
     padding: 20px;
     transition: all 0.5s ease;
 }
@@ -4496,8 +4499,7 @@ span.sm-info {
 .fbox-7.fbox--hover:hover {
     /* transform: translateY(-10px); */
     box-shadow: 0 10px 25px rgba(60, 72, 88, 0.15) ;
-    border: 1px solid #38ba89 !important;
-    
+    border: 2px solid #37ba88 !important;
 
 }
 
@@ -5983,7 +5985,6 @@ h2.statistic-number {
     -moz-transition: transform 400ms;
     -o-transition: transform 400ms;
     transition: transform 400ms;
-    opacity: 0.3;
 }
 
 /*------------------------------------------*/
@@ -6005,6 +6006,7 @@ h2.statistic-number {
     -o-transition: all 400ms ease-in-out;
     -ms-transition: all 400ms ease-in-out;
     transition: all 400ms ease-in-out;
+    background: linear-gradient(0deg, rgba(0, 36, 51, 0.60) 0%, rgba(0, 36, 51, 0.60) 100%);
 }
 
 /*------------------------------------------*/
@@ -6210,7 +6212,7 @@ p.rbox-2-txt span {
 /*------------------------------------------*/
 
 .review-1 {
-    padding: 25px 20px 25px;
+    padding: 25px;
     margin: 10px 10px 0px 10px !important;
     transition: all 0.5s ease;
     border: 1px solid #d9d9d9;
@@ -6269,7 +6271,7 @@ p.rbox-2-txt span {
 
 .review-ico {
     position: relative;
-    margin-top: -25px;
+    margin-top: -50px;
     margin-left: -10px;
     opacity: .1;
 }
@@ -6301,7 +6303,7 @@ p.rbox-2-txt span {
 }
 
 .review-avatar {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     float: none;
 }
 
@@ -6580,8 +6582,8 @@ p.rbox-2-txt span {
     flex-flow: row wrap;
     align-items: stretch!important;
     justify-content: flex-start;
-    padding: 27px;
-    border: 1px solid #ccc;
+    padding: 20px;
+    border: 2px solid #e5f4f0 !important;
 }
 
 .integrations-1-wrapper .in_tool-txt {
@@ -7733,7 +7735,7 @@ span.release-date span {
 
 .faqs-section .accordion-thumb {
     margin: 0;
-    padding: 20px 33px 20px 20px;
+    padding: 20px 33px 20px 20px !important;
     cursor: pointer;
     position: relative;
 }
@@ -8803,7 +8805,7 @@ img.footer-logo,
 img.footer-logo-dark {
     width: 170px;
     max-width: inherit;
-    max-height: 75px;
+
 }
 
 #footer-10 img.footer-logo {
@@ -11041,10 +11043,10 @@ body.theme--dark {
 
 .btn--theme {
     color: #fff!important;
-    /*border-color: #38ba89!important;
-  background-color: #38ba89!important;*/
-    border-color: #38ba89!important;
-    background-color: #38ba89!important;
+    border-color: #45c08a !important;
+    background-color: #45c08a !important;
+    box-shadow: 0 12px 30px rgba(69, 192, 138, .22);
+ 
 }
 
 .hover--theme:hover,

@@ -62,7 +62,7 @@
 								<!-- TITLE -->
 								<div class="col-md-12">
 									<div class="register-form-title">
-                    <img src="{{ asset('front/images/logo/logo.png') }}" width="155" alt="{{ env('APP_NAME') }}">
+                    <img src="{{ asset('front/images/logo/logo.png') }}" width="175" alt="{{ env('APP_NAME') }}">
 										<h4 class="mt-20 w-700">Log in to Portal</h4>
 									</div>
 								</div>
@@ -109,7 +109,7 @@
             <div class="col-md-6 col-lg-6 col-12 mt-md-0 mt-15">
               <div class="d-flex justify-content-center align-items-start">
                   <div class="img-block">
-                      <img src="{{ asset('front/images/Login-img.png') }}" alt="login now" class="img-fluid">
+                      <img src="{{ asset('front/images/login-image.png') }}" alt="login now" class="img-fluid">
                   </div>
               </div>
             </div> 

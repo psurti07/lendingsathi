@@ -35120,8 +35120,10 @@ h6 {
 .btn.btn-success:hover:not(.btn-active),
 .show > .btn.btn-success {
   color: var(--bs-success-inverse);
-  border-color:#47b078;
-  background-color: #47b078 !important;
+  /* border-color:#47b078;
+  background-color: #47b078 !important; */
+  background-color: #0a100f !important;
+    border-color: #38ba89 !important;
 }
 .btn-check:active + .btn.btn-success .svg-icon,
 .btn-check:active + .btn.btn-success i,

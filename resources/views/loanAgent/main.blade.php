@@ -61,13 +61,14 @@
 </style>
 @endpush
 @section('content')
-<section id="hero-201" class="bg--white-100 bg--fixed pb-0">
+<section id="hero-201" class="bg--white-100 bg--fixed">
     <div class="container">
         <div class="row">
-              <div class="col-md-12 col-lg-6 mt-lg-0 mt-3">
+            <div class="col-md-12 col-lg-6 mt-lg-0 mt-3 order-2">
                 <div class="d-flex justify-content-center align-items-start">
                     <div class="img-block">
-                        <img src="{{ asset('front/images/loan-agent.png') }}" alt="selfapply nbfc list" class="img-fluid">
+                        <img src="{{ asset('front/images/landingpage-02.png') }}" alt="selfapply nbfc list"
+                            class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -158,13 +159,14 @@
 </section>
 
 <!-- Affiliate NBFCs section starts -->
-<section id="integrations-2" class="py-80 integrations-section">
+<section id="integrations-2" class="py-80 integrations-section bg--green-100">
     <div class="container">
         <div class="r-12 text-center">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12">
                     <div class="section-title mb-40">
-                        <h2 class="s-28 mb-5">Trusted by the <span class="color--green-500">Best in the Industry</span></h2>
+                        <h2 class="s-28 mb-5">Trusted by the <span class="color--green-500">Best in the Industry</span>
+                        </h2>
                         <p class="s-16 color--grey mt-0">Partnering with the best NBFCs to provide the best for our
                             customers.</p>
                     </div>
@@ -186,7 +188,7 @@
     </div>
 </section>
 <!-- Affiliate NBFCs section ends -->
- <hr class="divider">
+<hr class="divider">
 
 <section id="features-6" class="py-80 features-section division">
     <div class="container">
@@ -207,7 +209,9 @@
                                 <div class="in_tool-logo ico-60">
                                     <div class="fbox-ico ico-50">
                                         <div class="shape-ico color--theme">
-                                         <img class="img-fluid" src="{{ asset('front/images/Strategic-Lending-Network.png') }}" alt="content-image">
+                                            <img class="img-fluid"
+                                                src="{{ asset('front/images/Strategic-Lending-Network.png') }}"
+                                                alt="content-image">
                                         </div>
                                     </div>
                                 </div>
@@ -224,7 +228,9 @@
                                 <div class="in_tool-logo ico-60">
                                     <div class="fbox-ico ico-50">
                                         <div class="shape-ico color--theme">
-                                              <img class="img-fluid" src="{{ asset('front/images/Completely-Online-Process.png') }}" alt="content-image">
+                                            <img class="img-fluid"
+                                                src="{{ asset('front/images/Completely-Online-Process.png') }}"
+                                                alt="content-image">
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +247,9 @@
                                 <div class="in_tool-logo ico-60">
                                     <div class="fbox-ico ico-50">
                                         <div class="shape-ico color--theme">
-                                              <img class="img-fluid" src="{{ asset('front/images/Self-Apply-Feature.png') }}" alt="content-image">
+                                            <img class="img-fluid"
+                                                src="{{ asset('front/images/Self-Apply-Feature.png') }}"
+                                                alt="content-image">
                                         </div>
                                     </div>
                                 </div>
@@ -259,7 +267,9 @@
                                 <div class="in_tool-logo ico-60">
                                     <div class="fbox-ico ico-50">
                                         <div class="shape-ico color--theme">
-                                            <img class="img-fluid" src="{{ asset('front/images/Hire-Loan-Agent-icon.png') }}" alt="content-image">
+                                            <img class="img-fluid"
+                                                src="{{ asset('front/images/Hire-Loan-Agent-icon.png') }}"
+                                                alt="content-image">
                                         </div>
                                     </div>
                                 </div>
@@ -280,19 +290,22 @@
 <!-- Testimonioals section starts -->
 <section id="reviews-1" class=" pt-0 pb-80 shape--06 reviews-section">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
-                <div class="section-title mb-40">
-                    <h2 class="s-28 mb-5">What Our <span class="color--green-500">Customer Says</span></h2>
-                    <p class="s-16 color--grey mt-0">Hear directly from our customers about their experiences with us.</p>
+        <div class="row align-items-center">
+            <div class="col-lg-6 d-lg-block d-none">
+                <div class="hero-7-img ps-0 text-center mb-md-0 mb-4">
+                    <img src="{{ asset('front/images/Customers-Say.png') }}" alt="lendingsathi" class="img-fluid p-0">
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Testimonials carousel start  -->
-                @include('partials.front.testimonials')
-                <!-- Testimonials carousel end  -->
+</div>
+                <div class="col-md-6">
+                    <div class="section-title mb-40 text-md-start text-center">
+                        <h2 class="s-28 mb-5">What Our <span class="color--green-500">Customers Say</span></h2>
+                        <p class="s-16 color--grey mt-0">Hear it firsthand from the experiences. </p>
+</div>
+                        <!-- Testimonials carousel start  -->
+                        @include('partials.front.testimonials')
+                        <!-- Testimonials carousel end  -->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -425,7 +438,7 @@ const sendOtpUrl = @json(route('self.apply.send.otp'));
 window.onscroll = function() {
     const btn = document.getElementById("goTopBtn");
     btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" :
-    "none";
+        "none";
 };
 
 // Scroll to top smoothly

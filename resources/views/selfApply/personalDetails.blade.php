@@ -1,6 +1,6 @@
 @extends('layouts.selfapply')
 @push('css')
-  <link href="{{ asset('front/css/custom.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('front/css/custom.css') }}" rel="stylesheet" type="text/css" />
 <style>
 .accordion-button {
     background-color: transparent !important;
@@ -17,8 +17,7 @@
 @endpush
 
 @section('content')
-<section id="contacts"
-    class="bg--white-100 bg--fixed pb-80 personal-details-form d-flex align-items-center">
+<section id="contacts" class="bg--white-100 bg--fixed pb-80 personal-details-form d-flex align-items-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-3 col-lg-3 col-12">
@@ -170,9 +169,6 @@
                     </form>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </section>
@@ -202,7 +198,7 @@ $(document).ready(function() {
                 beforeSend: function() {
                     $('#submit-btn').html(
                         '<span class="spinner-border spinner-border-sm"></span> Continue'
-                        );
+                    );
                     $('#submit-btn').attr('disabled', true);
                 },
                 success: function(result) {

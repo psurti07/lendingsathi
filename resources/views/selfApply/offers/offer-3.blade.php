@@ -9,12 +9,12 @@
 </style>
 @endpush
 @section('content')
-<section id="hero-7" class="bg--fixed hero-section mb-0">
+<section id="hero-7" class="bg--fixed hero-section">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-md-12 col-lg-6 order-2 order-md-2 order-lg-1">
                     <div class="img-block">
-                        <img src="{{ asset('front/images/offer/self-applypremium-offer.jpg') }}" alt="selfapply nbfc list" class="img-fluid rounded-3">
+                        <img src="{{ asset('front/images/offer/self-apply-premium-offer.jpg') }}" alt="selfapply nbfc list" class="img-fluid rounded-3">
                     </div>
             </div>
 
@@ -98,7 +98,7 @@
     </div>
 </section>
 
-<section id="integrations-2" class="py-80 integrations-section">
+<section id="integrations-2" class="py-80 integrations-section bg--green-100">
     <div class="container">
         <div class="r-12 text-center">
             <div class="row justify-content-center">
@@ -130,16 +130,18 @@
 <!-- Testimonials section start  -->
 <section id="reviews-1" class="py-80 features-section division">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
-                <div class="section-title text-center mb-40">
+        <div class="row align-items-center">
+            <div class="col-lg-6 d-lg-block d-none">
+                <div class="hero-7-img ps-0 text-center mb-md-0 mb-4">
+                    <img src="http://127.0.0.1:8000/front/images/home-img-1.png" alt="lendingsathi"
+                        class="img-fluid p-0">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="section-title text-md-start text-center mb-40">
                     <h2 class="s-28 w-700 mb-5">Our <span class="color--green-500">Happy Customer</span></h2>
                     <p class="s-16 color--grey mt-0">We Give Many Reasons For Our Customers To Shower Praises On Us!</p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-lg-12">
                 <!-- Testimonials carousel start  -->
                 @include('partials.front.testimonials')
                 <!-- Testimonials carousel end  -->

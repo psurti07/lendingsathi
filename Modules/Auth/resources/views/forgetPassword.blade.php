@@ -59,7 +59,7 @@
                             <!-- TITLE -->
                             <div class="col-md-12">
                                 <div class="register-form-title">
-                                    <img src="{{ asset('front/images/logo/logo.png') }}" width="155" alt="{{ env('APP_NAME') }}">
+                                    <img src="{{ asset('front/images/logo/logo.png') }}" width="175" alt="{{ env('APP_NAME') }}">
                                     <h4 class="mt-20 w-700">Forgot Password</h4>
                                     <p>Please enter your Mobile number you have created at registration.</p>
                                 </div>

@@ -3,75 +3,77 @@
 {{-- write or link your css file and styles tag here --}}
 <link href="{{ asset('front/css/custom.css') }}" rel="stylesheet" type="text/css" />
 <style>
-    .resend-otp-div a.disabled {
-        pointer-events: none;
-        cursor: not-allowed;
+.resend-otp-div a.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.bank-crousel {
+    display: block !important;
+}
+
+.radio:checked {
+    background: #38ba89;
+    border-color: #38ba89;
+}
+
+
+.testimonials-carousel .owl-item img {
+    width: 100% !important;
+}
+
+@media screen and (max-width: 767px) {
+    .hero-section {
+        padding-top: 10px !important;
     }
+}
 
-    .bank-crousel {
-        display: block !important;
-    }
+.input-group-text {
+    color: #666;
+    border: none;
+    background-color: #f5f6f8;
+    line-height: 1.3;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
-    .radio:checked {
-        background: #38ba89;
-        border-color: #38ba89;
-    }
+.request-form .form-control:focus {
+    background-color: #f5f6f8;
+    border-color: #f5f6f8;
+    border: none;
+}
 
-
-    .testimonials-carousel .owl-item img {
-        width: 100% !important;
-    }
-
-    @media screen and (max-width: 767px) {
-        .hero-section {
-            padding-top: 10px !important;
-        }
-    }
-
+@media screen and (max-width:991px) {
     .input-group-text {
-        color: #666;
-        border: none;
-        background-color: #f5f6f8;
-        line-height: 1.3;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
+        padding: 1.06rem 1.06rem;
     }
+}
 
-    .request-form .form-control:focus {
-        background-color: #f5f6f8;
-        border-color: #f5f6f8;
-        border: none;
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .input-group-text {
+        padding: 1rem 1rem;
+        margin-top: 1px;
     }
-
-    @media screen and (max-width:991px) {
-        .input-group-text {
-            padding: 1.06rem 1.06rem;
-        }
-    }
-
-    @media screen and (min-width:992px) and (max-width:1199px) {
-        .input-group-text {
-            padding: 1rem 1rem;
-            margin-top: 1px;
-        }
-    }
+}
 </style>
 @endpush
 @section('content')
-<section id="hero-201" class="bg--white-100 bg--fixed pb-0">
+<section id="hero-201" class="bg--white-100 bg--fixed">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-12 position-relative mt-0 m-auto mt-lg-0 mt-3">
+            <div class="col-lg-6 col-md-12 position-relative mt-0 m-auto mt-lg-0 mt-3 order-2">
                 <img class="img-responsive img-newsletter img-fluid d-block m-auto"
-                    src="{{ asset('front/images/self-apply.png') }}" alt="LendingSathi">
+                    src="{{ asset('front/images/landingpage-01.png') }}" alt="LendingSathi">
             </div>
             <div class="col-lg-6 col-md-12 m-auto">
                 <div id="hero-8-form" class="border border-primary r-06">
                     <p class="s-16  mb-2 mt-0">Need Money Fast?</p>
-                    <h4 class="s-20 w-700">Personal Loan Consultation Up to <span class="color--green-500"> ₹5,00,000/- </span>in Just Minutes!</h4>
-                    <form method="post" action="{{ route('self.apply.send.otp') }}" class="request-form save-form-1 needs-validation" novalidate>
+                    <h4 class="s-20 w-700">Personal Loan Consultation Up to <span class="color--green-500"> ₹5,00,000/-
+                        </span>in Just Minutes!</h4>
+                    <form method="post" action="{{ route('self.apply.send.otp') }}"
+                        class="request-form save-form-1 needs-validation" novalidate>
                         <div class="row g-2">
                             <div class="col-md-12">
                                 <div class="form-check ps-0">
@@ -79,7 +81,8 @@
                                         <div class="col-md-6 col-lg-6 col-sm-6 mb-2">
                                             <fieldset class="picker1">
                                                 <label class="card" for="personalloan">
-                                                    <input type="radio" name="loan_type" id="personalloan" value="1" class="radio" checked>
+                                                    <input type="radio" name="loan_type" id="personalloan" value="1"
+                                                        class="radio" checked>
                                                     <span class="plan-details">
                                                         <span class="plan-type color--green-500">Personal Loan</span>
                                                     </span>
@@ -89,7 +92,8 @@
                                         <div class="col-md-6 col-lg-6 col-sm-6 mb-2">
                                             <fieldset class="picker1">
                                                 <label class="card" for="businessloan">
-                                                    <input type="radio" name="loan_type" id="businessloan" value="2" class="radio">
+                                                    <input type="radio" name="loan_type" id="businessloan" value="2"
+                                                        class="radio">
                                                     <span class="plan-details">
                                                         <span class="plan-type color--green-500">Business Loan</span>
                                                     </span>
@@ -110,8 +114,10 @@
                                             <option value="2" data-loan="personal">Self Employed</option>
 
                                             <!-- Business Options -->
-                                            <option value="3" data-loan="business" style="display:none;">Small Business</option>
-                                            <option value="4" data-loan="business" style="display:none;">Audited Report</option>
+                                            <option value="3" data-loan="business" style="display:none;">Small Business
+                                            </option>
+                                            <option value="4" data-loan="business" style="display:none;">Audited Report
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
@@ -121,17 +127,25 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">+91</span>
                                     </div>
-                                    <input type="text" name="mobile" id="mobile" class="numeric-input form-control name" placeholder="Enter Your Mobile*" autocomplete="off" required maxlength="10" minlength="10" inputmode="numeric">
+                                    <input type="text" name="mobile" id="mobile" class="numeric-input form-control name"
+                                        placeholder="Enter Your Mobile*" autocomplete="off" required maxlength="10"
+                                        minlength="10" inputmode="numeric">
                                 </div>
                                 @component('components.ajax-error',['field'=>'mobile'])@endcomponent
                             </div>
                             <div class="col-md-12 form-btn">
-                                <button type="submit" id="checkmodal" class="btn btn--theme hover--theme submit">Apply Now</button>
+                                <button type="submit" id="checkmodal" class="btn btn--theme hover--theme submit">Apply
+                                    Now</button>
                             </div>
                             <div class="col-md-12"><span class="text-danger" id="usererrormsg"></span></div>
                         </div>
 
-                        <p class="mb-0 s-14 text-start text-dark">By submitting the form and proceeding, you agree to the <a href="{{ route('front.terms.conditions') }}" target="_blank" class="text-dark text-decoration-none">Terms of Use</a> and <a href="{{ route('front.privacy.policy') }}" class="text-dark text-decoration-none" target="_blank">Privacy Policy</a> of <a href="{{ route('front.home') }}" class="text-dark text-decoration-none" target="_blank">lendingsathi.com.</a></p>
+                        <p class="mb-0 s-14 text-start text-dark">By submitting the form and proceeding, you agree to
+                            the <a href="{{ route('front.terms.conditions') }}" target="_blank"
+                                class="text-dark text-decoration-none">Terms of Use</a> and <a
+                                href="{{ route('front.privacy.policy') }}" class="text-dark text-decoration-none"
+                                target="_blank">Privacy Policy</a> of <a href="{{ route('front.home') }}"
+                                class="text-dark text-decoration-none" target="_blank">lendingsathi.com.</a></p>
                     </form>
                 </div>
             </div>
@@ -140,14 +154,15 @@
 </section>
 
 <!-- Affiliate NBFCs section starts -->
-<section id="integrations-2" class="py-80 integrations-section">
+<section id="integrations-2" class="py-80 integrations-section bg--green-100">
     <div class="container">
         <div class="r-12 text-center">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12">
                     <div class="section-title mb-40">
                         <h2 class="s-28 mb-5">Our <span class="color--green-500">Lending Partners</span></h2>
-                        <p class="s-16 color--grey mt-0">Partnering with the best NBFCs to provide the best for our customers.</p>
+                        <p class="s-16 color--grey mt-0">Partnering with the best NBFCs to provide the best for our
+                            customers.</p>
                     </div>
                 </div>
             </div>
@@ -169,7 +184,7 @@
 <!-- Affiliate NBFCs section ends -->
 
 <!-- why lendingsathi section starts -->
-<section id="features-6" class="pt-0 pb-80 features-section division">
+<section id="features-6" class="py-80 features-section division">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-9">
@@ -210,7 +225,7 @@
                                     <div class="fbox-ico ico-50">
                                         <div class="shape-ico color--theme">
                                             <img class="img-fluid"
-                                                src="{{ asset('front/images/Outstanding-Subscription-Benefits.png') }}"
+                                                src="{{ asset('front/images/Outstanding-Subscription.png') }}"
                                                 alt="content-image">
                                         </div>
                                     </div>
@@ -252,7 +267,7 @@
                                     <div class="fbox-ico ico-50">
                                         <div class="shape-ico color--theme">
                                             <img class="img-fluid"
-                                                src="{{ asset('front/images/Expert-Financial-Consultation.png') }}"
+                                                src="{{ asset('front/images/Expert-Financial-Consultation-1.png') }}"
                                                 alt="content-image">
                                         </div>
                                     </div>
@@ -273,23 +288,25 @@
 <!-- why lendingsathi section ends -->
 
 <!-- Testimonioals section starts -->
-<section id="reviews-1" class="pt-0 pb-80 shape--06 reviews-section">
+<section id="reviews-1" class="pt-0 py-80 shape--06 reviews-section">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-12">
-                <div class="section-title mb-40">
-                    <h2 class="s-28 mb-5">What Our <span class="color--green-500">Customer Says</span></h2>
-                    <p class="s-16 color--grey mt-0">Hear directly from our customers about their experiences with us.</p>
+        <div class="row align-items-center">
+            <div class="col-lg-6 d-lg-block d-none">
+                <div class="hero-7-img ps-0 text-center mb-md-0 mb-4">
+                    <img src="{{ asset('front/images/Customers-Say.png') }}" alt="lendingsathi" class="img-fluid p-0">
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
+                <div class="section-title mb-40 text-md-start text-center">
+                    <h2 class="s-28 mb-5">What Our <span class="color--green-500">Customers Say</span></h2>
+                    <p class="s-16 color--grey mt-0">Hear it firsthand from the experiences. </p>
+                </div>
                 <!-- Testimonials carousel start  -->
                 @include('partials.front.testimonials')
                 <!-- Testimonials carousel end  -->
             </div>
         </div>
+    </div>
     </div>
 </section>
 <!-- Testimonioals section ends -->
@@ -301,12 +318,35 @@
                 <div class="form-holder">
                     <div class="contact-form-notice">
                         <p class="s-14">
+<<<<<<< HEAD
+                            <strong>Disclosure :</strong> The Loan repayment tenure ranges from minimum of 6 months to
+                            maximum of 60 months (5 years), depending on the lender’s policies and applicant
+                            eligibility. The maximum APR (Annual Percentage Rate), inclusive of interest rate,
+                            processing fees, and applicable charges, may go up to 34% per annum depending on the
+                            applicant’s profile and the policies of the respective lending partner. the Processing fees
+                            may be charged up to 2% of the approved loan amount. Representative Example: For a loan
+                            amount of ₹1,00,000 at an interest rate of 11.5% per annum for a tenure of 60 months (5
+                            years), with a processing fee of 2% (₹2,000): Approximate EMI: ₹2,301, Total Interest
+                            Payable: ₹38,059, Total Cost of the Loan: ₹1,38,059, Indicative APR: Approximately 14.41%
+                            per annum. *T&C Apply. All figures provided above are illustrative and indicative in nature.
+                            Actual loan terms may vary based on the applicant’s profile & lender policies.
+=======
                             <strong>Important Disclosure :</strong> Planetory Finserv India Private Limited is a service provider that connects users with third-party banks and NBFCs and does not provide loans directly. The repayment tenure for personal loans typically ranges from a minimum of 6 months to a maximum of 60 months (5 years), depending on the lender. The maximum Annual Percentage Rate (APR) can go up to 34.5% per annum, inclusive of applicable charges, depending on the applicant’s profile and lender policies.
+>>>>>>> 5227f7f46c7f84455374c35c2474d88bb9d79dd1
                         </p>
                         <p class="s-14">For example, if a user takes a loan of ₹5,00,000 at an interest rate of 12% per annum for 60 months, the processing fee may be up to 2% (₹10,000), the EMI would be approximately ₹11,122, the total interest payable would be around ₹1,67,320, and the total repayment amount would be approximately ₹6,67,320. All figures are indicative. Actual loan terms may vary depending on eligibility and lender criteria.</p>
 
                         <p class="s-14">
+<<<<<<< HEAD
+                            <strong>Disclaimer:</strong> LendingSathi is a loan service aggregator and is authorised to
+                            provide services on behalf of its Lending Partners..
+                        </p>
+                        <p class="s-14">
+                            <strong>Registered Office Address:</strong> {{ env('COMPANY_ADDRESS') }} <br /> Mobile:
+                            {{ env('COMPANY_MOBILE') }} | Email: {{ env('INFO_EMAIL') }}
+=======
                             <strong>Disclaimer:</strong> Planetory Finserv India Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.
+>>>>>>> 5227f7f46c7f84455374c35c2474d88bb9d79dd1
                         </p>
 
                     </div>
@@ -316,21 +356,29 @@
     </div>
 </section>
 <!-- otp modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content p-30 border-radius-10">
-            <form action="{{ route('self.apply.verify.otp') }}" method="post" class="request-form save-form-2 needs-validation" novalidate>
+            <form action="{{ route('self.apply.verify.otp') }}" method="post"
+                class="request-form save-form-2 needs-validation" novalidate>
                 <div class="modal-body">
                     <div class="row">
                         <p class="s-24">OTP Verification</p>
                         <p class="s-16">Enter the 4 digit OTP received on your mobile <br />
-                            <span class="text-success w-600">+91 <span class="text-success w-600" id="mobileNumber"></span>
+                            <span class="text-success w-600">+91 <span class="text-success w-600"
+                                    id="mobileNumber"></span>
                                 <a href="javascript:;" class="edit-phoneNumber" title="Edit Phone number">
-                                    <svg width="40px" height="18px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#949494">
+                                    <svg width="40px" height="18px" viewBox="0 0 24.00 24.00" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" stroke="#949494">
                                         <g id="SVGRepo_bgCarrier" stroke-width="0" />
-                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.43200000000000005" />
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke="#CCCCCC" stroke-width="0.43200000000000005" />
                                         <g id="SVGRepo_iconCarrier">
-                                            <path d="M15.4998 5.50067L18.3282 8.3291M13 21H21M3 21.0004L3.04745 20.6683C3.21536 19.4929 3.29932 18.9052 3.49029 18.3565C3.65975 17.8697 3.89124 17.4067 4.17906 16.979C4.50341 16.497 4.92319 16.0772 5.76274 15.2377L17.4107 3.58969C18.1918 2.80865 19.4581 2.80864 20.2392 3.58969C21.0202 4.37074 21.0202 5.63707 20.2392 6.41812L8.37744 18.2798C7.61579 19.0415 7.23497 19.4223 6.8012 19.7252C6.41618 19.994 6.00093 20.2167 5.56398 20.3887C5.07171 20.5824 4.54375 20.6889 3.48793 20.902L3 21.0004Z" stroke="#949494" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M15.4998 5.50067L18.3282 8.3291M13 21H21M3 21.0004L3.04745 20.6683C3.21536 19.4929 3.29932 18.9052 3.49029 18.3565C3.65975 17.8697 3.89124 17.4067 4.17906 16.979C4.50341 16.497 4.92319 16.0772 5.76274 15.2377L17.4107 3.58969C18.1918 2.80865 19.4581 2.80864 20.2392 3.58969C21.0202 4.37074 21.0202 5.63707 20.2392 6.41812L8.37744 18.2798C7.61579 19.0415 7.23497 19.4223 6.8012 19.7252C6.41618 19.994 6.00093 20.2167 5.56398 20.3887C5.07171 20.5824 4.54375 20.6889 3.48793 20.902L3 21.0004Z"
+                                                stroke="#949494" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
                                         </g>
                                     </svg>
                                 </a>
@@ -339,9 +387,12 @@
                         <div class="otp-form text-center">
                             <div class="otp-container">
                                 <input type="text" class="otp-input" pattern="\d" maxlength="1" inputmode="numeric">
-                                <input type="text" class="otp-input" pattern="\d" maxlength="1" disabled inputmode="numeric">
-                                <input type="text" class="otp-input" pattern="\d" maxlength="1" disabled inputmode="numeric">
-                                <input type="text" class="otp-input" pattern="\d" maxlength="1" disabled inputmode="numeric">
+                                <input type="text" class="otp-input" pattern="\d" maxlength="1" disabled
+                                    inputmode="numeric">
+                                <input type="text" class="otp-input" pattern="\d" maxlength="1" disabled
+                                    inputmode="numeric">
+                                <input type="text" class="otp-input" pattern="\d" maxlength="1" disabled
+                                    inputmode="numeric">
                                 {{--<input type="text" class="otp-input" pattern="\d" maxlength="1" disabled>
                                     <input type="text" class="otp-input" pattern="\d" maxlength="1" disabled>--}}
                             </div>
@@ -349,13 +400,17 @@
                         <span class="mt-2 s-12 text-success" id="msg">
                             <input type="hidden" id="verificationCode" name="otp" readonly>
                             <input type="hidden" id="acc_type" name="acc_type" readonly value="1">
-                            <input class="form-check-input" value="1" type="hidden" id="flexCheckDefault1" checked name="allow_sms" />
-                            <input class="form-check-input" value="1" type="hidden" id="flexCheckDefault" checked name="accept_tnc" />
+                            <input class="form-check-input" value="1" type="hidden" id="flexCheckDefault1" checked
+                                name="allow_sms" />
+                            <input class="form-check-input" value="1" type="hidden" id="flexCheckDefault" checked
+                                name="accept_tnc" />
                             <span class="text-danger f-w-400" id="invalidOtp" style="font-size:14px"></span>
                             @component('components.ajax-error',['field'=>'otp'])@endcomponent
                     </div>
                     <div class="row color--black resend-otp-div">
-                        <p class="s-12">Didn’t receive the code? <a href="javascript:;" id="resendOtp" class="text-success">Resend OTP</a>&nbsp;<span id="timer" class="text-success">(00:15)</span></p>
+                        <p class="s-12">Didn’t receive the code? <a href="javascript:;" id="resendOtp"
+                                class="text-success">Resend OTP</a>&nbsp;<span id="timer"
+                                class="text-success">(00:15)</span></p>
                     </div>
                 </div>
                 <button type="submit" id="otpBtn" class="btn btn--theme hover--theme submit mt-3">Verify OTP</button>
@@ -366,60 +421,61 @@
 @endsection
 @push('scripts')
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const personalLoan = document.getElementById("personalloan");
-        const businessLoan = document.getElementById("businessloan");
+document.addEventListener("DOMContentLoaded", function() {
+    const personalLoan = document.getElementById("personalloan");
+    const businessLoan = document.getElementById("businessloan");
 
-        const userTypeSelect = document.getElementById("user_type");
-        const options = userTypeSelect.querySelectorAll("option");
+    const userTypeSelect = document.getElementById("user_type");
+    const options = userTypeSelect.querySelectorAll("option");
 
-        function toggleUserTypeOptions() {
-            let type = "personal";
-            if (businessLoan && businessLoan.checked) type = "business";
+    function toggleUserTypeOptions() {
+        let type = "personal";
+        if (businessLoan && businessLoan.checked) type = "business";
 
-            // Show/Hide options based on loan type
-            options.forEach(option => {
-                if (option.dataset.loan === type) {
-                    option.style.display = "block";
-                } else {
-                    option.style.display = "none";
-                }
-            });
-
-            // If current selected option is hidden, select first visible one
-            const selectedOption = userTypeSelect.options[userTypeSelect.selectedIndex];
-            if (selectedOption.style.display === "none") {
-                const firstVisible = [...options].find(opt => opt.style.display !== "none");
-                if (firstVisible) userTypeSelect.value = firstVisible.value;
+        // Show/Hide options based on loan type
+        options.forEach(option => {
+            if (option.dataset.loan === type) {
+                option.style.display = "block";
+            } else {
+                option.style.display = "none";
             }
+        });
+
+        // If current selected option is hidden, select first visible one
+        const selectedOption = userTypeSelect.options[userTypeSelect.selectedIndex];
+        if (selectedOption.style.display === "none") {
+            const firstVisible = [...options].find(opt => opt.style.display !== "none");
+            if (firstVisible) userTypeSelect.value = firstVisible.value;
         }
+    }
 
-        // Run on load
-        toggleUserTypeOptions();
+    // Run on load
+    toggleUserTypeOptions();
 
-        // Run on change
-        if (personalLoan) personalLoan.addEventListener("change", toggleUserTypeOptions);
-        if (businessLoan) businessLoan.addEventListener("change", toggleUserTypeOptions);
-    });
+    // Run on change
+    if (personalLoan) personalLoan.addEventListener("change", toggleUserTypeOptions);
+    if (businessLoan) businessLoan.addEventListener("change", toggleUserTypeOptions);
+});
 </script>
 
 <script>
-    const sendOtpUrl = @json(route('self.apply.send.otp'));
+const sendOtpUrl = @json(route('self.apply.send.otp'));
 </script>
 <!-- write or link your script file and script tag here -->
 <script src="{{ asset('front/js/selfApply.js') }}"></script>
 <script>
-    window.onscroll = function() {
-        const btn = document.getElementById("goTopBtn");
-        btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
-    };
+window.onscroll = function() {
+    const btn = document.getElementById("goTopBtn");
+    btn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" :
+        "none";
+};
 
-    // Scroll to top smoothly
-    function goToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
+// Scroll to top smoothly
+function goToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
 </script>
 @endpush

@@ -175,7 +175,7 @@
                                                 @component('components.ajax-error',['field'=>'company_gst'])@endcomponent
                                             </div>
                                             <div class="col-md-12 text-start">
-                                                <button class="btn btn-success btn-sm hover-elevate-up" type="submit" id="company-submit-btn">Submit</button>
+                                                <button class="btn btn-success" type="submit" id="company-submit-btn">Submit</button>
                                             </div>
                                         </div>
                                     </form>
@@ -208,7 +208,7 @@
                                                 @component('components.ajax-error',['field'=>'password_confirmation'])@endcomponent
                                             </div>
                                             <div class="col-md-12 text-start">
-                                                <button class="btn btn-success btn-sm hover-elevate-up" type="submit" id="support-submit-btn">Change Password</button>
+                                                <button class="btn btn-success" type="submit" id="support-submit-btn">Change Password</button>
                                             </div>
                                         </div>
                                     </form>

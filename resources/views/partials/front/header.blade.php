@@ -46,10 +46,10 @@
                         </li>
                         @endif
                         <li class="nl-simple" aria-haspopup="true">
-                            <a href="{{ route('self.apply.main') }}" class="btn r-04 btn--green-400 hover--tra-black last-link">Self Apply</a>
+                            <a href="{{ route('self.apply.main') }}" class="btn r-12 btn--green-400 hover--tra-black last-link">Self Apply</a>
                         </li>
                         <li class="nl-simple" aria-haspopup="true">
-                            <a href="{{ route('loan.agent.main') }}" class="btn r-04 btn--green-400 hover--tra-black last-link">Hire an Agent</a>
+                            <a href="{{ route('loan.agent.main') }}" class="btn r-12 btn--green-400 hover--tra-black last-link">Hire an Agent</a>
                         </li>
                     </ul>
                 </nav>

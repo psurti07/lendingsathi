@@ -5,7 +5,7 @@
             <!-- FOOTER LOGO -->
             <div class="col-xl-4 mb-sm-20 mb-md-20">
                 <div class="footer-info">
-                    <img class="footer-logo mb-3" src="{{ asset('front/images/logo/logo-w.png') }}" alt="{{ env('APP_NAME') }}" />
+                    <img class="footer-logo mb-2" src="{{ asset('front/images/logo/logo-w.png') }}" alt="{{ env('APP_NAME') }}" />
                     <div class="fs-6 mt-3 mb-5 text-light">
                         <p>Backed by partnerships with leading NBFCs, Lending Sathi is committed to making your financial journey smoother, simpler, and more reliable. </p>
                     </div>

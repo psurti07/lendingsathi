@@ -36,8 +36,7 @@ a#failed-btn:hover {
 @endpush
 
 @section('content')
-<section id="contacts"
-    class="bg--white-100 bg--fixed pb-80 personal-details-form d-flex align-items-center">
+<section id="contacts" class="bg--white-100 bg--fixed pb-80 personal-details-form d-flex align-items-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-3 col-lg-3 col-12">

@@ -202,7 +202,7 @@
                                     </div>
                                 </div>
                             @else
-                                <div class="card" data-bs-theme="light" style="background: linear-gradient(112.14deg, #38ba89 0%, #0c974e 100%)">
+                                <div class="card" data-bs-theme="light" style="background-image: linear-gradient(180deg, #5d6463, #5d6463);">
                                     <div class="card-body">
                                         <div class="row align-items-center h-100">
                                             <div class="col-12">
@@ -212,7 +212,7 @@
                                                     <span class="fs-2qx fw-bold">Process Your Pre-Approved Offers Instantly with Our Experts.</span>
                                                 </div>
                                                 <div class="d-flex flex-column flex-sm-row mt-4 d-grid gap-2">
-                                                    <a href="{{ route('customer.renew.plan') }}" class="btn btn-dark flex-shrink-0 me-lg-2">Hire Agent Now</a>
+                                                    <a href="{{ route('customer.renew.plan') }}" class="btn btn-success flex-shrink-0 me-lg-2">Hire Agent Now</a>
                                                 </div>
                                             </div>
                                         </div>

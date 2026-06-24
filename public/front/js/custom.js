@@ -208,13 +208,13 @@
 						items:1
 					},
 					768:{
-						items:2
+						items:1
 					},
 					991:{
-						items:2
+						items:1
 					},
 					1000:{
-						items:2
+						items:1
 					}
 				}
 		});

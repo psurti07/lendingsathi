@@ -40,7 +40,7 @@
                                         @component('components.ajax-error',['field'=>'message'])@endcomponent
                                     </div>
                                     <div class="col-md-12 text-end">
-                                        <button class="btn btn-success btn-sm hover-elevate-up" type="submit" id="support-submit-btn">Submit request</button>
+                                        <button class="btn btn-success btn-sm" type="submit" id="support-submit-btn">Submit request</button>
                                     </div>
                                 </div>
                             </form>

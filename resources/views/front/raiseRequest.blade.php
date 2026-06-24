@@ -21,7 +21,7 @@
                 <div class="col-md-12 text-center">
                     <div class="left-column">
                         <span class="section-id"></span>
-                        <h2 class="s-28 mb-5">Raise a <span class="color--green-500">Request</span></h2>
+                        <h2 class="s-28 mb-5">Raise a Request</h2>
                         <p class="s-16 color--grey mt-0">
                             Have a query? Raise a request with LendingSathi and get quick assistance for all your loan needs.
                         </p>
