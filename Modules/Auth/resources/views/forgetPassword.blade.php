@@ -90,7 +90,7 @@
                     <div class="col-md-6 col-lg-6 col-12 mt-md-0 mt-15">
                         <div class="d-flex justify-content-center align-items-start">
                             <div class="img-block">
-                                <img src="{{ asset('front/images/Login-img.png') }}" alt="login now" class="img-fluid">
+                      <img src="{{ asset('front/images/login-image.png') }}" alt="login now" class="img-fluid">
                             </div>
                         </div>
                     </div> 
