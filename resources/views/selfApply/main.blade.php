@@ -318,37 +318,13 @@
                 <div class="form-holder">
                     <div class="contact-form-notice">
                         <p class="s-14">
-<<<<<<< HEAD
-                            <strong>Disclosure :</strong> The Loan repayment tenure ranges from minimum of 6 months to
-                            maximum of 60 months (5 years), depending on the lender’s policies and applicant
-                            eligibility. The maximum APR (Annual Percentage Rate), inclusive of interest rate,
-                            processing fees, and applicable charges, may go up to 34% per annum depending on the
-                            applicant’s profile and the policies of the respective lending partner. the Processing fees
-                            may be charged up to 2% of the approved loan amount. Representative Example: For a loan
-                            amount of ₹1,00,000 at an interest rate of 11.5% per annum for a tenure of 60 months (5
-                            years), with a processing fee of 2% (₹2,000): Approximate EMI: ₹2,301, Total Interest
-                            Payable: ₹38,059, Total Cost of the Loan: ₹1,38,059, Indicative APR: Approximately 14.41%
-                            per annum. *T&C Apply. All figures provided above are illustrative and indicative in nature.
-                            Actual loan terms may vary based on the applicant’s profile & lender policies.
-=======
                             <strong>Important Disclosure :</strong> Planetory Finserv India Private Limited is a service provider that connects users with third-party banks and NBFCs and does not provide loans directly. The repayment tenure for personal loans typically ranges from a minimum of 6 months to a maximum of 60 months (5 years), depending on the lender. The maximum Annual Percentage Rate (APR) can go up to 34.5% per annum, inclusive of applicable charges, depending on the applicant’s profile and lender policies.
->>>>>>> 5227f7f46c7f84455374c35c2474d88bb9d79dd1
                         </p>
                         <p class="s-14">For example, if a user takes a loan of ₹5,00,000 at an interest rate of 12% per annum for 60 months, the processing fee may be up to 2% (₹10,000), the EMI would be approximately ₹11,122, the total interest payable would be around ₹1,67,320, and the total repayment amount would be approximately ₹6,67,320. All figures are indicative. Actual loan terms may vary depending on eligibility and lender criteria.</p>
 
                         <p class="s-14">
-<<<<<<< HEAD
-                            <strong>Disclaimer:</strong> LendingSathi is a loan service aggregator and is authorised to
-                            provide services on behalf of its Lending Partners..
-                        </p>
-                        <p class="s-14">
-                            <strong>Registered Office Address:</strong> {{ env('COMPANY_ADDRESS') }} <br /> Mobile:
-                            {{ env('COMPANY_MOBILE') }} | Email: {{ env('INFO_EMAIL') }}
-=======
                             <strong>Disclaimer:</strong> Planetory Finserv India Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders such as banks and NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. Users are advised to verify all details and read the terms and conditions of the respective lender before proceeding.
->>>>>>> 5227f7f46c7f84455374c35c2474d88bb9d79dd1
                         </p>
-
                     </div>
                 </div>
             </div>
