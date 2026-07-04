@@ -511,61 +511,51 @@ class SelfApplyController extends Controller
             $productData = Product::where('productslug', $productslug)->first();
             $amount = ($productData->inOffer == 1) ? $productData->offeramount : $productData->amount;
             $grandAmount = $amount + ($amount * 0.18);
+            $roundAmount  = floor($grandAmount);
 
-            $uatNumbers = explode(',', env('UAT_MOBILE_NUMBERS', '')); // Convert the string into an array
+            // $uatNumbers = explode(',', env('UAT_MOBILE_NUMBERS', '')); // Convert the string into an array
+
+            $uatNumbers = [];
+
+            $uatNumbers = config('constant.uat_mobile_numbers');
 
             foreach ($uatNumbers as $uatNum) {
                 if ($uatNum == Cookie::get('user_mobile')) {
-                    $grandAmount = 1;
+                    $roundAmount = 1;
                     break; // Exit the loop once a match is found
                 }
             }
 
-            $orderid = "ZPLive" . number_format(microtime(true) * 1000, 0, '.', '');
-            //$orderid = "PPLive" . number_format(microtime(true) * 1000, 0, '.', '');
-
             $returnUrl = $inputs['plan'] == 2 ? route('api.loan.agent.buy.digital.agent.plan') : route('api.self.apply.buy.digital.plan');
-            //$callbackUrl = $inputs['plan'] == 2 ? route('loan.agent.callbackUrl') : route('self.apply.callbackUrl');
+            // $api = new Api(env('RAZOR_KEY_ID'), env('RAZOR_KEY_SECRET'));
+            $api = new Api(config('services.razorpay.key'), config('services.razorpay.secret'));
 
-            if (env('ZAAKPAY_ENV') == "PRODUCTION") {
-                $curlurl = "https://api.zaakpay.com/api/paymentTransact/V8";
-            } else {
-                $curlurl = "https://zaakstaging.zaakpay.com/api/paymentTransact/V8";
-            }
+            $order = $api->order->create([
+                'receipt' => 'RAZ_' . time(),
+                'amount' => $roundAmount * 100,
+                'currency' => 'INR'
+            ]);
 
-            $firstname = (Cookie::get('fullname') != "") ? Cookie::get('fullname') : Cookie::get('email');
-            $zaakpayPostData = array(
-                "merchantIdentifier" => env('ZAAKPAY_MERCHANT_IDENTIFIER'),
-                "orderId" => $orderid,
-                "returnUrl" => $returnUrl,
-                "currency" => 'INR',
-                "amount" => $grandAmount * 100,
-                "buyerEmail" => Cookie::get('email'),
-                "buyerFirstName" => $firstname,
-                "buyerPhoneNumber" => Cookie::get('user_mobile'),
-                "buyerCountry" => 'India',
-                "productDescription" => $productData->productname,
-            );
+            $orderid = $order['id'];
 
-            ksort($zaakpayPostData);
-            $checksumData = "";
-
-            foreach ($zaakpayPostData as $key => $value) {
-                $checksumData .= $key . '=' . $value . '&';
-            }
-
-            $checksum = hash_hmac('sha256', $checksumData, env('ZAAKPAY_SECRET_KEY'));
-
-            $zaakPayData = array(
+            Razorpayentry::create([
                 'rec_date' => now(),
-                'entryfor' => $entryfor, // 11 - selfapply, 12 - loanagent
+                'entryfor' => $entryfor,
                 'userid' => Cookie::get('userid'),
                 'orderid' => $orderid,
-                'orderamount' => $grandAmount,
+                'orderamount' => $roundAmount,
                 'ordernote' => $productData->productname,
-            );
-            $response = ZaakpayEntry::create($zaakPayData);
-            return View('pg.zaakpay-checkout', compact('zaakpayPostData', 'checksum', 'curlurl'));
+            ]);
+
+            return view('pg.razorpay', [
+                'order_id' => $orderid,
+                'amount' => $roundAmount * 100,
+                'name' => Cookie::get('fullname'),
+                'email' => Cookie::get('email'),
+                'mobile' => Cookie::get('user_mobile'),
+                'plan' => $inputs['plan'],
+                'returnUrl' => $returnUrl
+            ]);
         } catch (\Exception $e) {
             Log::error('selfapply checkout - checkout method error occured: ' . $e->getMessage());
             return redirect('/error')->with('error', 'Oops! Something went wrong.');
@@ -817,70 +807,25 @@ class SelfApplyController extends Controller
             $password = trim(random_code(6));
             Session::put('user_password', $password);
 
-            $orderId = $request->input('orderId');
+            $orderId = $request->razorpay_order_id;
             Session::put('orderid', $orderId);
 
             $responseCode = $request->input('responseCode');
             Session::put('responsecode', $responseCode);
 
-            $status = 'failed';
-            if ($responseCode == '100') {
-                $status = 'success';
-            } elseif ($responseCode == '200') {
-                $status = 'pending';
-            }
-
             $orderAmount = $request->input('amount') / 100;
-            $txnId = $request->input('pgTransId');
-            $paymentMode = $request->input('paymentMode');
-            $recd_checksum = $request->input('checksum');
+            $txnId = $request->razorpay_payment_id;
+            $paymentMode = 'razorpay';
 
-            $checksum = $checksumData = '';
+            $paymentData = Razorpayentry::where('orderid', $orderId)->first();
 
-            $checksumsequence = array(
-                "amount",
-                "bank",
-                "bankid",
-                "cardId",
-                "cardScheme",
-                "cardToken",
-                "cardhashid",
-                "doRedirect",
-                "orderId",
-                "paymentMethod",
-                "paymentMode",
-                "responseCode",
-                "responseDescription",
-                "productDescription",
-                "product1Description",
-                "product2Description",
-                "product3Description",
-                "product4Description",
-                "pgTransId",
-                "pgTransTime"
-            );
-
-            foreach ($checksumsequence as $seqvalue) {
-                if (array_key_exists($seqvalue, $request->all())) {
-                    $checksumData .= $seqvalue;
-                    $checksumData .= "=";
-                    $checksumData .= htmlspecialchars($request->input($seqvalue));
-                    $checksumData .= "&";
-                }
-            }
-
-            $checksum = hash_hmac('sha256', $checksumData, env('ZAAKPAY_SECRET_KEY'));
-
-            $paymentData = ZaakpayEntry::where('orderid', $orderId)->first();
-            $zaakPayData = array(
+            Razorpayentry::where('id', $paymentData->id)->update([
                 'rec_date' => now(),
                 'orderamount' => $orderAmount,
-                'statuscode' => $status,
-                'transactionid' => $txnId,
+                'txstatus' => $responseCode,
+                'referenceid' => $txnId,
                 'paymentmode' => $paymentMode
-            );
-
-            $response1 = ZaakpayEntry::where('id', $paymentData->id)->update($zaakPayData);
+            ]);
 
             $userData = $query = LoanApplications::select(
                 'user_registrations.id as userid',
@@ -947,12 +892,12 @@ class SelfApplyController extends Controller
                 $netamount = ($productData->inOffer == 1) ? $productData->offeramount : $productData->amount;
 
                 if ($userData->state == 'Gujarat') {
-                    $cgstamount = $netamount * 0.09;
-                    $sgstamount = $netamount * 0.09;
+                    $cgstamount = floor($netamount * 0.09);
+                    $sgstamount = floor($netamount * 0.09);
                 } else {
-                    $igstamount = $netamount * 0.18;
+                    $igstamount = floor($netamount * 0.18);
                 }
-                $grandtotal = $netamount + $cgstamount + $sgstamount + $igstamount;
+                $grandtotal = floor($netamount + $cgstamount + $sgstamount + $igstamount);
 
                 $invoiceNo = SiteOption::where('option_key', 'newinvoiceno')
                     ->select('option_value')
@@ -1118,7 +1063,7 @@ class SelfApplyController extends Controller
                 $lastname = strtolower($userData->last_name);
                 $city = strtolower(preg_replace("/[^a-zA-Z]+/", "", $userData->city));
                 $state = strtolower(getStateAbbreviation($userData->state));
-                $orderData = orderdata($orderId, 'zaakpay_entry');
+                $orderData = orderdata($orderId, 'razorpayentry');
 
                 if (isset($responsecode) && $responsecode == 100) {
                     UserRegistration::where('id', $userData->userid)->update(['process_step' => 5]);
