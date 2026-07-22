@@ -2736,7 +2736,7 @@
                         <table>
                             <thead>
                             <tr>
-                                <th class="tm_width_3 tm_semi_bold tm_accent_color tm_accent_bg_10 tm_f14">#</th>
+                                <th class="tm_width_3 tm_semi_bold tm_accent_color tm_accent_bg_10 tm_f14">No</th>
                                 <th class="tm_width_4 tm_semi_bold tm_accent_color tm_accent_bg_10 tm_f14">Item</th>
                                 <th class="tm_width_1 tm_semi_bold tm_accent_color tm_accent_bg_10 tm_f14">Qty</th>
                                 <th class="tm_width_2 tm_semi_bold tm_accent_color tm_accent_bg_10 tm_f14">Amount(Rs.)</th>
