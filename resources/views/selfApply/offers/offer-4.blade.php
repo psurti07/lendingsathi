@@ -224,7 +224,10 @@ $(document).ready(function() {
                 success: function(result) {
                     $(this).attr("disabled", false);
                     if (result.type === 'SUCCESS') {
-                        window.location.href = result.payment_url;
+                       toastr.success(result.message);
+                        setTimeout(function() {
+                            window.location.href = result.url;
+                        }, 5000);
                     } else {
                         setTimeout(function() {
                             window.location.reload();
