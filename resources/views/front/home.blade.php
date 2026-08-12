@@ -19,8 +19,8 @@
                         <h1 class="s-40 w-700">Take One Step Closer to Your Financial Dreams</h1>
                         <p class="mb-20">Get premier financial consultation and services from industry experts to move
                             forward towards your goals with confidence.</p>
-                        <a href="{{ route('self.apply.main') }}"
-                            class="btn r-12 btn--theme hover--tra-black last-link">Self Apply</a>
+                        {{-- <a href="{{ route('self.apply.main') }}"
+                            class="btn r-12 btn--theme hover--tra-black last-link">Self Apply</a> --}}
                         <a href="{{ route('loan.agent.main') }}"
                             class="btn r-12 btn--theme hover--tra-black last-link">Hire an Agent</a>
                     </div>
@@ -205,8 +205,8 @@
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-center mb-lg-0 mb-10">
+        <div class="row align-items-center justify-content-center m-auto">
+            {{-- <div class="col-lg-6 text-center mb-lg-0 mb-10">
                 <div class="team-member position-relative">
                     <div class="team-member-photo  text-center mb-5">
                         <div class="hover-overlay">
@@ -226,8 +226,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 text-center feature-card-right">
+            </div> --}}
+            <div class="col-lg-8 text-center feature-card-right">
                 <div class="team-member position-relative">
                     <div class="team-member-photo  text-center mb-5">
                         <div class="hover-overlay">
@@ -953,7 +953,6 @@ $(document).ready(function() {
 
 <script>
 const routes = {
-    'selfapply': "{{ route('self.apply.send.otp') }}",
     'loan-agent': "{{ route('loan.agent.send.otp') }}"
 };
 

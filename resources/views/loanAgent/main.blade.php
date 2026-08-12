@@ -432,7 +432,6 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <script>
-const sendOtpUrl = @json(route('self.apply.send.otp'));
 </script>
 <!-- write or link your script file and script tag here -->
 <script src="{{ asset('front/js/loanAgent.js') }}"></script>
