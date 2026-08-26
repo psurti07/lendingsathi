@@ -74,7 +74,7 @@
             </div>
             <div class="col-md-12 col-lg-6 m-auto">
                 <div id="hero-8-form" class="border border-primary r-06">
-                    <h4 class="s-20 w-700 mb-2">Need Funds? <span class="color--green-500">Start With Options.</span></h4>
+                    <h4 class="s-20 w-700 mb-2">Your Loan Journey, <span class="color--green-500">Better Guided</span></h4>
                     <p class="s-16">Choose your loan type and explore available options from lending partners.</p>
 
                     <form method="post" action="{{ route('loan.agent.send.otp') }}"
@@ -165,7 +165,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-12">
                     <div class="section-title mb-40">
-                        <h2 class="s-28 mb-5">Trusted by the <span class="color--green-500">Best in the Industry</span>
+                        <h2 class="s-28 mb-5">Partners That <span class="color--green-500">Power Options</span>
                         </h2>
                         <p class="s-16 color--grey mt-0">Partnering with the best NBFCs to provide the best for our
                             customers.</p>
@@ -202,8 +202,8 @@
         </div>
         <div class="fbox-wrapper text-center">
             <div class="integrations-1-wrapper">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 rows-2">
-                    <div class="col mb-3">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 rows-2">
+                    <div class="col mb-3 d-flex">
                         <div class="in_tool it-3 r-12 fbox-7 fbox--hover bg--white-100 r-12 w-100 h-100 mb-0">
                             <div class="in_tool-logo-wrap">
                                 <div class="in_tool-logo ico-60">
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-3">
+                    <div class="col mb-3 d-flex">
                         <div class="in_tool it-3 r-12 fbox-7 fbox--hover bg--white-100 r-12 w-100 h-100 mb-0">
                             <div class="in_tool-logo-wrap">
                                 <div class="in_tool-logo ico-60">
@@ -241,7 +241,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-md-0 mb-3">
+                    {{-- <div class="col mb-md-0 mb-3">
                         <div class="in_tool it-3 r-12 fbox-7 fbox--hover bg--white-100 r-12 w-100 h-100 mb-0">
                             <div class="in_tool-logo-wrap">
                                 <div class="in_tool-logo ico-60">
@@ -259,8 +259,8 @@
                                 <p>Check available loan options and complete your application online. </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
+                    </div> --}}
+                    <div class="col mb-3 d-flex">
                         <div class="in_tool it-3 r-12 fbox-7 fbox--hover bg--white-100 r-12 w-100 h-100 mb-0">
                             <div class="in_tool-logo-wrap">
                                 <div class="in_tool-logo ico-60">
