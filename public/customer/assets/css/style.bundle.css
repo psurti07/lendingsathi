@@ -49900,7 +49900,7 @@ body {
 .show > .aside .btn-custom {
   color: #fff;
   border-color: var(--bs-aside-btn-active-bg-color);
-  background-color: var(--bs-aside-btn-active-bg-color) !important;
+  background-color: #45c589 !important;
 }
 .aside .btn-custom.active .svg-icon,
 .aside .btn-custom.active i,
