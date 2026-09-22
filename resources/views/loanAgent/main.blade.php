@@ -74,8 +74,8 @@
             </div>
             <div class="col-md-12 col-lg-6 m-auto">
                 <div id="hero-8-form" class="border border-primary r-06">
-                    <h4 class="s-20 w-700 mb-2">Your Loan Journey, <span class="color--green-500">Better Guided</span></h4>
-                    <p class="s-16">Choose your loan type and explore available options from lending partners.</p>
+                    <h4 class="s-20 w-700 mb-2">Discover Loan Options Up to <span class="color--green-500">₹50 Lakhs</span></h4>
+                    <p class="s-16">Simple choices from trusted lending partners.</p>
 
                     <form method="post" action="{{ route('loan.agent.send.otp') }}"
                         class="request-form save-form-1 needs-validation" novalidate>
