@@ -224,7 +224,7 @@ $(document).ready(function() {
                 success: function(result) {
                     $(this).attr("disabled", false);
                     if (result.type === 'SUCCESS') {
-                       toastr.success(result.message);
+                        toastr.success(result.message);
                         setTimeout(function() {
                             window.location.href = result.url;
                         }, 5000);

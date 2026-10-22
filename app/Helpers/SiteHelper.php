@@ -224,7 +224,7 @@ if (!function_exists('raiseRequestFaqs')) {
                         <div class="accordion-panel-item">
                             <div class="faqs-2-answer">
                                 <p>
-                                    We request you to kindly call the company on +91-{#VAR#} between 10 AM to 5 PM- Monday to Saturday (only business days). Allow us to discuss your concerns, and we will ensure that you receive the best solutions possible. 
+                                    We request you to kindly call the company on +91-98257-52084 between 10 AM to 5 PM- Monday to Saturday (only business days). Allow us to discuss your concerns, and we will ensure that you receive the best solutions possible. 
                                 </p>
                             </div>
                         </div>
@@ -636,11 +636,12 @@ if (!function_exists('sendBrevoHtmlMail2')) {
             )
         );
         $response = curl_exec($curl);
+
         $err = curl_error($curl);
 
         log::info('sendBrevoHtmlMail2 response : ' . $response);
         log::info('sendBrevoHtmlMail2 err : ' . $err);
-
+        
         curl_close(handle: $curl);
 
         return true;

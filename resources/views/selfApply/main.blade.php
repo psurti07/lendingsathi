@@ -321,7 +321,7 @@
                             <strong>Important Note : </strong> We ask our customers to make payments ONLY on our website lendingsathi.com and NOT through any other source, directly or indirectly.
                         </p>
                         <p class="s-14">
-                            <strong>Disclaimer : </strong>LendingSathi Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders/NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. The amount paid is only for the service charge. We are not lenders and do not guarantee any loan approval. Loan approval, disbursement/sanction is entirely dependent on NBFC criteria.
+                            <strong>Disclaimer : </strong>lendingsathi Private Limited is not a lender or financial institution. We do not provide loans or make credit decisions. All loan approvals, interest rates, fees, and disbursal are handled by third-party lenders/NBFCs. We do not guarantee loan approval, disbursal, or specific loan terms. The amount paid is only for the service charge. We are not lenders and do not guarantee any loan approval. Loan approval, disbursement/sanction is entirely dependent on NBFC criteria.
                         </p>
                         <p class="s-14">
                             <strong>Pre-Application Note : </strong>Users are advised to read our terms and conditions and policies before proceeding/applying/registration.

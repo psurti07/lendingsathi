@@ -1406,12 +1406,12 @@ class LoanAgentController extends Controller
                     ];
 
                     /* send email in brevo */
-                    sendBrevoHtmlMail2($mailData, 'Congratulations! Payment for Kredittap’s Hire Agent plan has been successful.', $sendGreetings, 3, $attachments);
+                    sendBrevoHtmlMail2($mailData, 'Congratulations! Payment for loandingsathi’s Hire Agent plan has been successful.', $sendGreetings, 3, $attachments);
 
                     $remote_data = array(
-                        'company_code' => '#',
+                        'company_code' => config('constant.COMPANY_CODE'),
                         'company_local_ip' => '190.92.174.183',
-                        'product_code' => 'HIRE AGENT',
+                        'product_code' => 'HIRELOAN',
                         'customer_name' => $userData->first_name . ' ' . $userData->last_name,
                         'customer_email' => $userData->email,
                         'customer_mobile' => $userData->mobile,
