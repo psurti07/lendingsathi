@@ -803,7 +803,7 @@ if (!function_exists('sendForgetPassword')) {
 if (!function_exists('getFacebookDomainVerificationId')) {
     function getFacebookDomainVerificationId()
     {
-        return InfoPages::where('slug', 'sa_facebookdomain')->first()->content;
+        return InfoPages::where('slug', 'la_facebookdomain')->first()->content;
     }
 }
 
