@@ -811,7 +811,7 @@ if (!function_exists('getFacebookPixelKey')) {
     function getFacebookPixelKey()
     {
         $url = request()->segment(1);
-        $pxKey = ($url == 'agent') ? 'la_facebookpixelkey' : 'sa_facebookpixelkey';
+        $pxKey = ($url == 'self-apply') ? 'sa_facebookpixelkey' : 'la_facebookpixelkey';
         return InfoPages::where('slug', $pxKey)->first()->content;
     }
 }
