@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="font-family: Montserrat, Google Sans, Segoe UI, Roboto, Arial, Ubuntu, sans-serif;">
     <head>
         <meta charset="UTF-8" />
@@ -462,7 +462,7 @@
                                                                     <tr>
                                                                         <td align="left" style="padding: 20px; margin: 0; line-height: 2rem;border: 1px solid #38ba89;
                                                                             border-radius: 12px;
-                                                                            background-color: #E9F2FB;">
+                                                                            background-color: #38ba8912;">
                                                                             @yield('content')
                                                                         </td>
                                                                     </tr>
